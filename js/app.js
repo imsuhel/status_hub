@@ -168,6 +168,7 @@ function changeElements(get_name, className) {
 
 // wallpaperCall function here
 function wallpaperCall() {
+  document.getElementById('details_data').classList.remove('card-columns');
   document.getElementById('details_data').classList.add('row');
   const api = '18081533-eacd5d1aa06f8c1de22a2bd00';
   changeElements('Latest Wallpapers', 'wallpaper');
