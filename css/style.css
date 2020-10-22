@@ -1,0 +1,407 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+noscript{
+    font-size: 80px;
+    position: absolute;
+    top: 50%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    -webkit-text-stroke: 3px #fb7868;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 4px!important;
+  height: 4px!important;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #fe988b;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #fe988b;
+}
+body{
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+p{margin-bottom: 0;}
+.card{box-shadow: none!important; margin-bottom: 0!important}
+.padding-small{
+  position: relative;
+  padding: 30px 0;
+  background: #eaeaea;
+}
+.heading {
+    position: relative;
+    font-size: 35px;
+    font-weight: 700;
+    color: #545454;
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.heading:before {
+  content: '';
+  position: absolute;
+  margin: auto;
+  width: 200px;
+  height: 5px;
+  text-align: center;
+  background: #fe988b;
+  top: 45px;
+  border-radius: 3px;
+}
+a{
+  text-decoration: none;
+}
+#details{
+  display: none;
+}
+/* css start here */
+.navbar-brand{
+  font-size: 30px;
+  color: #fd6b59;
+  font-weight: bold;
+  padding: 0;
+}
+.nav-item {
+  margin: 0 15px;
+}
+.nav-item .nav-link{
+    font-size: 16px;
+    font-weight: 700;
+    color: #060606;
+}
+.nav-item .nav-link:hover{
+  color: #fb7868!important;
+}
+.nav-item .nav-link i{
+  position: relative;
+  font-size: 20px;
+}
+.sticky {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    background: rgb(255, 255, 255);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.10);
+    -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.10);
+    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.10);
+    animation: 600ms ease-in-out 0s normal none 1 running fadeInDown;
+    box-sizing: border-box;
+}
+.sticky .navbar{
+  padding: 5px;
+}
+.sticky .navbar-brand{
+	max-width: 200px!important;
+}
+.header-banner{
+  padding-top: 15px!important;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../img/banner-bg.webp);
+  background-size: cover;
+  background-position: center;
+}
+.navbar{
+  box-shadow: none;
+}
+
+.banner-card {
+    background: #fff;
+    padding: 20px 30px;
+    position: relative;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: border 0.2s ease-in-out;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+}
+.banner-card:hover{
+  cursor: pointer;
+  border-left: 10px solid #fb7868;
+}
+.banner-icons i{
+    font-size: 45px;
+    color: #fb7868;
+    margin: 15px 0;
+}
+.banner-card span{
+  font-size: 25px;
+  font-weight: bold;
+}
+.latest-status {
+    position: relative;
+    margin-top: -80px;
+    margin-bottom: 120px;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 25px 15px;
+    box-shadow: 0 2px 9px 0px rgb(0 0 0 / 15%);
+}
+.status-card{
+    background: #f1f1f1;
+    padding: 15px 15px;
+    margin-bottom: 20px;
+    min-height: 158px;
+    transition: all 0.4s ease-in-out;
+    box-sizing: border-box;
+}
+.wallpaper-card {
+    background: #f1f1f1;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    color: #fd6b59!important;
+    font-size: 20px;
+    box-shadow: 0 0px 6px 1px rgb(0 0 0 / 20%);
+    cursor: pointer;
+}
+.wallpaper-card img{
+  width: 100%!important;
+  height: 248px!important;
+}
+.wallpaper-card i{
+  color: #fd6b59!important;
+}
+
+.status-desc{
+  position: relative;
+  font-size: 16px;
+  font-weight: 600;
+  color: #5d5d5d;
+  text-align: left;
+}
+.copy-btn{
+    background: #fb7868;
+    color: #fff;
+    border-radius: 17px;
+    padding: 6px 20px;
+    font-weight: 700;
+    transition: all 300ms ease-in-out;
+    margin: 0;
+}
+.copy-btn:hover, .copy-btn:focus, .copy-btn:active{
+  color: #ffffff;
+  padding: 6px 30px;
+}
+.display-icon{
+  display: none;
+}
+
+.footer-section{
+  position: relative;
+  padding: 50px 0 0 0;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url(../img/banner-bg.webp);
+  background-size: cover;
+  background-position: center;
+}
+.footer-section .footer-heading{
+  position: relative;
+  font-size: 22px;
+  font-weight: 600;
+  text-transform: capitalize;
+  text-align: center;
+  margin-bottom: 25px;
+  color: #ffffff;
+}
+.footer-section .quick-links{
+  margin: 0 0 0 70px;
+  list-style: none;
+}
+.footer-section .quick-links li{
+  margin: 10px 0;
+  position: relative;
+}
+.footer-section .quick-links li::before{
+  position: absolute;
+  content: "\f105";
+  font-family: FontAwesome;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fb7868;
+}
+.footer-section .quick-links li a{
+  font-size: 18px;
+  font-weight: 500;
+  padding-left: 20px;
+  transition: all 0.5s ease;
+  color: #dedede;
+}
+.footer-section .quick-links li:hover a{
+  font-size: 18.4px;
+  font-weight: bold;
+  color: #fb7868;
+}
+.footer-section .social-links{
+  margin: 0 0 0 50px;
+  list-style: none;
+}
+.footer-section .social-links li{
+  margin: 10px 0;
+  position: relative;
+}
+.footer-section .social-links li i{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  color: #ffffff;
+  line-height: 35px;
+  padding: 0 12px;
+  font-size: 15px;
+  transition: all 0.4s ease;
+  margin-right: 10px;
+  font-weight: bold;
+}
+.face i{background: #3b5998 !important;}
+.insta i{background: #2e5e86!important;}
+.twit i{background: #1da1f2 !important;}
+.footer-section .social-links li a{
+  padding-left: 10px;
+  color: #ffffff;
+  font-size: 16px;
+  transition: 0.4s all;
+}
+.footer-section .social-links li:hover a{
+  font-weight: bold;
+  font-size: 18px;
+}
+.footer-section .about{
+  color: #cecece;
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.cradit{
+  background: #000000;
+  text-align: center;
+  color: #ffffff;
+  padding: 10px 0;
+}
+.cradit p{
+  font-size: 16px;
+  font-weight: bold;
+  color: #fb7868;
+  margin-bottom: 0;
+}
+/* footer close here */
+.load-more, .load-more:hover{
+  position: relative;
+  padding: 12px 25px;
+  color: #ffffff;
+  background: #fb7868;
+  font-weight: bold;
+  border-radius: 25px;
+}
+#banner-bg{
+  position: relative;
+  min-height: 30vh;
+  background-size: cover;
+  background-position: center;
+}
+#catName{
+  color: #ffffff;
+  text-shadow: 3px 3px 0px rgb(251 120 104);
+  font-size: 50px;
+  font-weight: bold
+}
+#wallpaper_list{
+  display: none;
+  overflow: auto;
+  white-space: nowrap;
+  margin: 70px 0;
+  padding: 8px 0;
+}
+.btns-group button{
+  border: none!important;
+  background: #ffffff!important;
+  color: #000;
+  font-weight: bold;
+  padding: 8px 12px;
+}
+.btns-group button:hover{
+background: #fb7868!important;
+  color: #ffffff!important;
+}
+.btn.active {
+    color: #fff!important;
+    background: #fd6b59!important;
+}
+/* .fetch-img{
+  min-width: 100%;
+  min-height: 100%;
+} */
+/* classes added by javascript */
+.wallpaper{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)),
+                    url(../img/wallpaper.webp)!important;
+}
+.textstatus{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)),
+                    url(../img/text_status.webp)!important;
+}
+.hindijoke{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)),
+                    url(../img/jokes.jpg)!important;
+}
+.imgQuote{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)),
+                    url(../img/imgquotes.jpg)!important;
+}
+.main_close{
+  display: none;
+}
+.details_show{
+  display: block!important;
+}
+
+
+.banner-sticky{
+  position: fixed!important;
+  animation: 1000ms ease-in-out 0s normal none 1 running fadeInDown;
+  z-index: 1;
+  background: #ececec!important;
+  min-height: 10vh!important;
+  top: 55px;
+}
+.banner-sticky #wallpaper_list{
+  margin: 0;
+  padding: 4px 0;
+}
+.banner-sticky .btns-group button{
+  padding: 6px 8px;
+    margin-top: 0;
+    margin-bottom: 2px;
+}

@@ -1,0 +1,230 @@
+
+/* phone only */
+@media (max-width: 599px) {
+  .padding-small {
+    padding: 42px 10px;
+  }
+
+  .status-card:nth-child(odd) {
+    border-left: 2px solid #fd6b59 !important;
+  }
+
+  .heading:before {
+    content: '';
+    position: absolute;
+    width: 40%;
+    height: 4px;
+    background: #fe988b;
+    top: 30px;
+    border-radius: 3px;
+  }
+
+  .header-banner {
+    padding-top: 15px !important;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/banner-bg.webp);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .banner-card {
+    border-radius: 5px;
+    text-align: center;
+    padding: 20px 4px;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    margin-bottom: 25px;
+  }
+
+  .banner-card:hover {
+    cursor: pointer;
+    border-left: 0!important;
+  }
+
+  .banner-card i {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+
+  .banner-card span {
+    font-size: 16px;
+  }
+
+  .heading {
+    position: relative;
+    font-size: 20px;
+    font-weight: 700;
+    color: #545454;
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+  }
+
+  #banner-bg h2 {
+    font-size: 50px;
+  }
+
+  .status-card .status-desc {
+    font-size: 15px;
+    text-align: center !important;
+  }
+
+  .imgQuote h2 {
+    font-size: 40px !important;
+  }
+
+  #wallpaper, #hindiJoke {
+    position: relative;
+    margin-top: -30px;
+  }
+}
+
+/* tablet potrait up */
+@media (max-width:600px) {
+  noscript {
+      font-size: 40px;
+      top: 36%;
+      -webkit-text-stroke: 1px #fb7868;
+  }
+  .sticky .navbar{
+    padding: 0;
+  }
+  .footer-links p {
+    margin: 5px 0 !important;
+  }
+
+  .btns-group .btn {
+    padding: 6px 10px !important;
+  }
+
+  .wallpaper-card img {
+    height: 200px !important;
+    border-bottom: 3px solid #fd6b59;
+  }
+
+  .navbar {
+    box-shadow: none !important;
+    padding: 4px 0;
+  }
+
+  .footer-section .quick-links, .footer-section .social-links {
+    margin: 0 0 0 0;
+  }
+
+  .footer-section .footer-heading {
+    text-align: left;
+  }
+
+  .footer-section .quick-links li a {
+    font-size: 15px;
+    padding-left: 22px;
+  }
+
+  .footer-section .quick-links li::before {
+    font-size: 17px;
+    font-weight: normal;
+  }
+
+  .footer-section .quick-links li:hover a {
+    font-size: 16px;
+  }
+  .banner-sticky{
+    top: 45px;
+    min-height: 9vh!important;
+    padding: 3px 15px;
+  }
+  .banner-sticky #wallpaper_list {
+      padding: 0 0 4px 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .mobileMenu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: auto;
+    transform: translateX(-100%);
+    -webkit-transition: all ease 0.5s;
+    -o-transition: all ease 0.5s;
+    transition: all ease 0.5s;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+  }
+
+  .mobileMenu.open {
+    position: fixed;
+    transform: translateX(0) !important;
+    justify-content: center;
+    background: rgb(247 130 153 / 76%);
+  }
+
+  .navbar .navbar-toggler {
+    padding-top: 13px;
+  }
+
+  .navbar-toggler .display {
+    display: block !important;
+    color: #ffffff;
+    position: absolute;
+    font-size: 40px;
+    z-index: 4;
+    margin-top: -40px;
+    transition: display 1s ease-in-out;
+    transition-delay: 1s !important;
+    right: 5px;
+  }
+
+  .navbar-nav {
+    margin-top: -32px !important;
+    padding-left: 80px;
+  }
+
+  .nav-item {
+    padding: 0 3px;
+    margin: 5px 0;
+  }
+
+  .navbar .navbar-nav .nav-item:hover .nav-link {
+    color: #000 !important;
+  }
+
+  .navbar .navbar-nav .nav-item .nav-link i {
+    font-size: 39px;
+    position: relative;
+    margin-right: 5px;
+    margin-top: -7px;
+    top: 1px;
+    vertical-align: middle;
+  }
+
+  .nav-item .nav-link {
+    font-size: 40px !important;
+    color: #ffffff !important;
+    text-align: left !important;
+  }
+  .footer-section .about{
+    font-size: 14px;
+  }
+}
+
+/* tablet lanscape up */
+@media (min-width:900px) {}
+
+@media (min-width:1024px) {
+  .banner-card span{
+    font-size: 22px;
+  }
+}
+
+/* desktop up */
+@media (min-width:1200px) {}
+
+/* bi desktop up */
+@media (min-width: 1800px) {}

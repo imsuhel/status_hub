@@ -1,0 +1,325 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Status Hub - Your Favourite Status, Wallpaers & Jokes Spot</title>
+  <link rel="icon" href="img/fevicon.png" sizes="16x16" type="img/png">
+  <meta name="description" content="Daily updated collection of awesome and unique status to express your feelings and situation on Whatsapp, twitter or facebook.">
+  <meta name="description" content="❤ SтαтυѕQυєєη.cσм - Free Download Latest Whatsapp Dp Images, Profile Pictures, HD Mobile Wallpapers , UHD Desktop Wallpapers and Ringtones ">
+  <meta name="keywords" content="New Status, Facebook Status, Whatsapp Status, Punjabi Status, Hindi Status, Mobile Wallpapers, Desktop Wallpapers Mobile Ringtones">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#fd868c ">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/mdb.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/media.css">
+</head>
+
+<body ontouchmove='swipe(event)'>
+  <!-- main div open here -->
+  <div id="main">
+    <header>
+      <div class="sticky-header container-fluid shadow">
+        <!--Navbar-->
+        <nav class="navbar container navbar-expand-lg">
+          <button class="navbar-toggler align-self-start" type="button">
+            <span class="fa fa-bars"></span>
+            <span class="fa fa-times display-icon"></span>
+          </button>
+          <!-- nabvar toggler button clsoe here -->
+          <a class="navbar-brand" href="#"><img src="img/logo.png" alt="staus hub" class="img-fluid"></a>
+          <!-- navbar brand close here -->
+          <div class="collapse navbar-collapse d-flex flex-column pl-lg-0 mt-lg-0 flex-lg-row justify-content-lg-end mobileMenu" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-lg-auto m-0 align-self-stretch ">
+              <li class="nav-item active">
+                <a class="nav-link" href="#home"> <i class="fa fa-home"></i> Home
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" onclick="wallpaperCall()">
+                  <i class="fa fa-google-wallet"></i> wallpapers
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" onclick="textStatusCall()">
+                  <i class="fa fa-pencil"></i> text status
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" onclick="hindiJokeCall()">
+                  <i class="fa fa-quote-left"></i> hindi jokes
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" onclick="imgQuoteCall()">
+                  <i class="fa fa-picture-o"></i> image quates
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!--/.Navbar-->
+      </div>
+      <!-- container-fluid close here -->
+
+      <!-- header banner start here -->
+      <div id="home" class="container-fluid header-banner pt-5">
+        <div class="container">
+          <div class="row">
+            <div id='wallpaper' data-aos="fade-up" data-aos-duration="2000" class="col-lg-3 col-sm-6 col-6">
+              <div class="banner-card">
+                <div class="banner-icons">
+                  <i class="fa fa-google-wallet"></i>
+                </div>
+                <span>Wallpapers</span>
+              </div>
+            </div>
+            <!-- col md close here -->
+            <div id='textStatus' data-aos="fade-down" data-aos-duration="2000" class="col-lg-3 col-sm-6 col-6">
+              <div class="banner-card">
+                <div class="banner-icons">
+                  <i class="fa fa-pencil"></i>
+                </div>
+                <span>text status</span>
+              </div>
+            </div>
+            <!-- col md close here -->
+            <div id='hindiJoke' data-aos="fade-up" data-aos-duration="2000" class="col-lg-3 col-sm-6 col-6">
+              <div class="banner-card">
+                <div class="banner-icons">
+                  <i class="fa fa-quote-left"></i>
+                </div>
+                <span>hindi jokes</span>
+              </div>
+            </div>
+            <!-- col md close here -->
+            <div id='imgQuote' data-aos="fade-down" data-aos-duration="2000" class="col-lg-3 col-sm-6 col-6">
+              <div class="banner-card">
+                <div class="banner-icons">
+                  <i class="fa fa-picture-o"></i>
+                </div>
+                <span>image quotes</span>
+              </div>
+            </div>
+            <!-- col md close here -->
+          </div>
+        </div>
+      </div>
+      <!-- header banner close here -->
+    </header>
+    <!-- header close here -->
+    <!-- section start here -->
+    <section class="padding-small">
+      <div class="container latest-status" data-aos="fade-up-right" data-aos-duration="1000">
+        <h4 class="heading">Latest quotes</h4>
+        <!-- home qoute will be here -->
+        <div id="home_quote" class="card-columns"></div>
+      </div>
+      <!-- latest status close here for text msg -->
+      <div class="container latest-status" data-aos="fade-up-left" data-aos-duration="1000">
+        <h4 class="heading">Latest wallpapers</h4>
+        <!-- home wallpare will be here -->
+        <div id="home_img" class="row"></div>
+      </div>
+      <!-- latest status close here for wallpaper -->
+      <div class="container latest-status mb-0" data-aos="fade-up-right" data-aos-duration="1000">
+        <h4 class="heading">Hindi Jokes</h4>
+        <!-- home jokes will be here -->
+        <div id="home_joke" class="card-columns"></div>
+      </div>
+      <!-- latest status close here for text msg -->
+    </section>
+    <!-- section close here -->
+  </div>
+  <!-- main div close here -->
+
+
+  <!-- details div open here -->
+  <div id="details">
+    <header>
+      <div class="sticky-header container-fluid">
+        <!--Navbar-->
+        <nav class="navbar container navbar-expand-lg">
+          <!-- nabvar toggler button clsoe here -->
+          <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="staus hub" class="img-fluid"></a>
+          <!-- navbar brand close here -->
+          <div class="collapse navbar-collapse d-flex flex-column pl-lg-0 mt-lg-0 flex-lg-row justify-content-lg-end mobileMenu" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-lg-auto m-0 align-self-stretch ">
+              <li class="nav-item active">
+                <a class="nav-link waves-effect waves-light" href="#home"> <i class="fa fa-home"></i> Home
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link waves-effect waves-light" href="#footer"><i class="fa fa-user-circle-o"></i> About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link waves-effect waves-light" href="#footer"> <i class="fa fa-compress"></i> Contact</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!--/.Navbar-->
+      </div>
+      <!-- container-fluid close here -->
+      <div id="banner-bg" class="container-fluid d-flex justify-content-center align-items-center">
+        <!-- <h2 id="catName"></h2> -->
+        <div id="wallpaper_list" class="btns-group">
+          <button type="button" value="Animals" class="btn">Animals</button>
+          <button type="button" value="Background" class="btn">Background</button>
+          <button type="button" value="Building" class="btn">Building</button>
+          <button type="button" value="Coffee" class="btn">Coffee</button>
+          <button type="button" value="City" class="btn">City</button>
+          <button type="button" value="Delhi" class="btn">Delhi</button>
+          <button type="button" value="Education" class="btn">Education</button>
+          <button type="button" value="Emotion" class="btn">Emotion</button>
+          <button type="button" value="Food" class="btn">Food</button>
+          <button type="button" value="India" class="btn">India</button>
+          <button type="button" value="Kashmir" class="btn">Kashmir</button>
+          <button type="button" value="Love" class="btn">Love</button>
+          <button type="button" value="Mumbai" class="btn">Mumbai</button>
+          <button type="button" value="Motivation" class="btn">Motivation</button>
+          <button type="button" value="Music" class="btn">Music</button>
+          <button type="button" value="Nature" class="btn">Nature</button>
+          <button type="button" value="National Park" class="btn">National Park</button>
+          <button type="button" value="Pakistan" class="btn">Pakistan</button>
+          <button type="button" value="Religion" class="btn">Religion</button>
+          <button type="button" value="Romance" class="btn">Romance</button>
+          <button type="button" value="Science" class="btn">Science</button>
+          <button type="button" value="Sport" class="btn">Sport</button>
+          <button type="button" value="Travel" class="btn">Travel</button>
+        </div>
+      </div>
+    </header>
+    <!-- header-close here -->
+    <section class="padding-small">
+      <div class="container latest-status mb-0">
+        <h4 id="heading" class="heading"></h4>
+        <div id="details_data" class="card-columns"></div>
+        <!--all data will be herer -->
+      </div>
+      <!-- latest status close here for wallpaper -->
+    </section>
+    <!-- section close here -->
+  </div>
+  <!-- details div clsoe ehre -->
+
+  <noscript> JavaScript is Disable! <br> Please Enable JavaScript</noscript>
+
+  <!-- footer start here -->
+  <footer class="footer-section" id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 offset-lg-1 offset-sm-0">
+          <h4 class="footer-heading">About Status Hub</h4>
+          <p class="about text-justify">
+            Status Hub is a website that provides quotes and motivational thoughts
+            here we use many apis to show data on the website all data are stored on thired party website we do not have rights of all thoes data this website is just created for learning purpose here we do not sell or buy anything.
+          </p>
+
+        </div>
+        <!-- col md close here -->
+        <div class="col-md-3 col-6">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="quick-links">
+            <li><a onclick="wallpaperCall()">Wallpapers</a></li>
+            <li><a onclick="textStatusCall()">Text Status</a></li>
+            <li><a onclick="hindiJokeCall()">Hindi Jokes</a></li>
+            <li><a onclick="imgQuoteCall()">Image Quotes</a></li>
+          </ul>
+
+        </div>
+        <!-- col md close here -->
+        <div class="col-md-3 col-6">
+          <h4 class="footer-heading">Follow Here</h4>
+          <ul class="social-links">
+            <li class="face">
+              <a href=""><i class="fa fa-facebook"></i> Facebook</a>
+            </li>
+            <li class="insta">
+              <a href=""><i class="fa fa-instagram"></i>Instagram</a>
+            </li>
+            <li class="twit">
+              <a href=""><i class="fa fa-twitter"></i>Twitter</a>
+            </li>
+          </ul>
+
+        </div>
+        <!-- col md close here -->
+      </div>
+    </div>
+    <div class="container-fluid cradit">
+      <p>2020 All rights reserved. <a href="">Status Sub</a></p>
+    </div>
+  </footer>
+  <!-- footer close here -->
+
+
+
+
+
+
+
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+  <script type="text/javascript">
+    AOS.init();
+
+    function swipe(event) {
+      var p1 = document.querySelector('.mobileMenu');
+      var touch = event.targetTouches[0];
+      var px = touch.pageX;
+      var midpoint = Math.floor(screen.width / 2);
+      if (px <= midpoint) {
+        p1.classList.add("open");
+      } else {
+        p1.classList.remove("open");
+      }
+    }
+
+    // stickey menu
+    $(window).on('scroll', function() {
+      var scroll = $(window).scrollTop(),
+        mainHeader = $('.sticky-header'),
+        mainHeaderHeight = mainHeader.innerHeight();
+
+      // console.log(mainHeader.innerHeight());
+      if (scroll > 100) {
+        $(".sticky-header").addClass("sticky");
+        $('.wallpaper').addClass('banner-sticky');
+      } else {
+        $(".sticky-header").removeClass("sticky");
+        $('.wallpaper').removeClass('banner-sticky');
+      }
+    });
+    // mobile menu
+    $(document).ready(function() {
+      $(".navbar-toggler").on("click", function() {
+        $(".mobileMenu").toggleClass("open");
+      })
+    });
+    $(document).ready(function() {
+      $(".navbar-toggler").on("click", function() {
+        $(".display-icon").toggleClass("display");
+      })
+    });
+
+    $(document).on('click', '.btns-group .btn', function() {
+      $(this).addClass(' active').siblings().removeClass(' active');
+    })
+  </script>
+
+
+</body>
+
+</html>
