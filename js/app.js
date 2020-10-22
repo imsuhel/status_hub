@@ -216,6 +216,8 @@ function wallpaperCall() {
     let wallpapersName = e.target.value;
     document.getElementById('heading').innerHTML = wallpapersName + " Wallpaper";
     wallpaperapiCall(`https://pixabay.com/api/?key=${api}&q=${wallpapersName}&image_type=photo&orientation=vertical&per_page=200 &pretty=true`);
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
   }
 
 } //wallpaperCall close here
